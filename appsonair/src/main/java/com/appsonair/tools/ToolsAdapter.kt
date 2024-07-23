@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.appsonair.R
-import java.util.ArrayList
 
 class ToolsAdapter(private val mOnItemSelected: OnItemSelected) :
     RecyclerView.Adapter<ToolsAdapter.ViewHolder>() {

@@ -43,15 +43,19 @@ class BottomSheetShape : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeLis
                 R.id.rb_line -> {
                     mProperties!!.onShapePicked(ShapeType.Line)
                 }
+
                 R.id.rb_arrow -> {
                     mProperties!!.onShapePicked(ShapeType.Arrow())
                 }
+
                 R.id.rb_oval -> {
                     mProperties!!.onShapePicked(ShapeType.Oval)
                 }
+
                 R.id.rb_rectangle -> {
                     mProperties!!.onShapePicked(ShapeType.Rectangle)
                 }
+
                 else -> {
                     mProperties!!.onShapePicked(ShapeType.Brush)
                 }
@@ -87,6 +91,7 @@ class BottomSheetShape : BottomSheetDialogFragment(), SeekBar.OnSeekBarChangeLis
             R.id.sb_opacity -> if (mProperties != null) {
                 mProperties!!.onOpacityChanged(i)
             }
+
             R.id.sb_brush_size -> if (mProperties != null) {
                 mProperties!!.onShapeSizeChanged(i)
             }

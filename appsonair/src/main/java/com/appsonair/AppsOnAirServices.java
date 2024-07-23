@@ -39,9 +39,9 @@ import okhttp3.Response;
 
 public class AppsOnAirServices {
 
+    private static final String TAG = "AppsOnAirServices";
     static String appId;
     static Boolean showNativeUI;
-    private static final String TAG = "AppsOnAirServices";
     static SensorManager mSensorManager;
     static float mAccel, mAccelCurrent, mAccelLast;
 
