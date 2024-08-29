@@ -34,7 +34,7 @@ class ShakeBugService {
         var labelColor: String = LABEL_COLOR
         var hintColor: String = HINT_COLOR
         var inputTextColor: String = INPUT_TEXT_COLOR
-
+        var raiseNewTicket: Boolean = false
 
         fun isValidColorHex(colorHex: String): Boolean {
             return try {
@@ -49,6 +49,7 @@ class ShakeBugService {
         @JvmOverloads
         fun shakeBug(
             context: Context,
+            raiseNewTicket: Boolean = false,
             pageBackgroundColor: String = PAGE_BACKGROUND_COLOR,
             appbarBackgroundColor: String = APP_BAR_BACKGROUND_COLOR,
             appbarTitleText: String = APP_BAR_TITLE_TEXT,
@@ -86,7 +87,12 @@ class ShakeBugService {
                 if (isValidColorHex(hintColor)) hintColor else HINT_COLOR
             ShakeBugService.inputTextColor =
                 if (isValidColorHex(inputTextColor)) inputTextColor else INPUT_TEXT_COLOR
-            AppsOnAirServices.shakeBug(context)
+            ShakeBugService.raiseNewTicket = raiseNewTicket
+            if (raiseNewTicket) {
+                AppsOnAirServices.raiseNewTicket(context)
+            } else {
+                AppsOnAirServices.shakeBug(context)
+            }
         }
     }
 }

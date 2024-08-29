@@ -16,6 +16,7 @@
         android:required="true" />
 
     <application
+        android:largeHeap="true"
         android:requestLegacyExternalStorage="true"
         android:supportsRtl="true">
         <activity

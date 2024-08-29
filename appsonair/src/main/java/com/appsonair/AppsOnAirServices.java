@@ -99,6 +99,12 @@ public class AppsOnAirServices {
         context.startActivity(intent);
     }
 
+    public static void raiseNewTicket(Context context) {
+        Intent intent = new Intent(context, FeedbackActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
+
     public static String getCurrentDateTimeString() {
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
