@@ -1,4 +1,4 @@
-package com.appsonair;
+package com.appsonair.interfaces;
 
 
 public interface UpdateCallBack {

@@ -1,4 +1,4 @@
-package com.appsonair;
+package com.appsonair.services;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

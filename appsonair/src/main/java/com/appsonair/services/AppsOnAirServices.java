@@ -1,4 +1,4 @@
-package com.appsonair;
+package com.appsonair.services;
 
 import static android.content.Context.SENSOR_SERVICE;
 
@@ -21,6 +21,14 @@ import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+
+import com.appsonair.BuildConfig;
+import com.appsonair.R;
+import com.appsonair.activities.AppUpdateActivity;
+import com.appsonair.activities.EditImageActivity;
+import com.appsonair.activities.FeedbackActivity;
+import com.appsonair.activities.MaintenanceActivity;
+import com.appsonair.interfaces.UpdateCallBack;
 
 import org.json.JSONObject;
 

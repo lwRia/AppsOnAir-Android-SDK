@@ -1,4 +1,4 @@
-package com.appsonair.tools
+package com.appsonair.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.appsonair.R
+import com.appsonair.enums.ToolType
 
 class ToolsAdapter(private val mOnItemSelected: OnItemSelected) :
     RecyclerView.Adapter<ToolsAdapter.ViewHolder>() {

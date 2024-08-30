@@ -19,9 +19,9 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.appsonair.AppsOnAirServices
-import com.appsonair.ShakeBugService
-import com.appsonair.UpdateCallBack
+import com.appsonair.interfaces.UpdateCallBack
+import com.appsonair.services.AppsOnAirServices
+import com.appsonair.services.ShakeBugService
 import java.io.IOException
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
@@ -40,7 +40,8 @@ class ShakeActivity : AppCompatActivity() {
 
         ShakeBugService.shakeBug(this)
 
-        AppsOnAirServices.checkForAppUpdate(this, object : UpdateCallBack {
+        AppsOnAirServices.checkForAppUpdate(this, object :
+            UpdateCallBack {
             override fun onSuccess(response: String) {
                 Log.e("mye", "" + response)
             }
@@ -71,10 +72,10 @@ class ShakeActivity : AppCompatActivity() {
         val versionCode = packageInfo.versionCode
         val packagename = packageInfo.packageName
 
-        Log.d("TAG", "shakeBug: " + versionName)
-        Log.d("TAG", "shakeBug: " + versionCode)
-        Log.d("TAG", "shakeBug: " + appName)
-        Log.d("TAG", "shakeBug: " + packagename)
+        Log.d("TAG", "adapters: " + versionName)
+        Log.d("TAG", "adapters: " + versionCode)
+        Log.d("TAG", "adapters: " + appName)
+        Log.d("TAG", "adapters: " + packagename)
 
         val locale: Locale = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             getResources().getConfiguration().getLocales().get(0)

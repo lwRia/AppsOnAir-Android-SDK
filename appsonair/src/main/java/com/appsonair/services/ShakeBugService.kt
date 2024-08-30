@@ -1,4 +1,4 @@
-package com.appsonair
+package com.appsonair.services
 
 import android.content.Context
 import android.graphics.Color
@@ -67,30 +67,30 @@ class ShakeBugService {
             hintColor: String = HINT_COLOR,
             inputTextColor: String = INPUT_TEXT_COLOR,
         ) {
-            ShakeBugService.pageBackgroundColor =
+            Companion.pageBackgroundColor =
                 if (isValidColorHex(pageBackgroundColor)) pageBackgroundColor else PAGE_BACKGROUND_COLOR
-            ShakeBugService.appbarBackgroundColor =
+            Companion.appbarBackgroundColor =
                 if (isValidColorHex(appbarBackgroundColor)) appbarBackgroundColor else APP_BAR_BACKGROUND_COLOR
-            ShakeBugService.appbarTitleText = appbarTitleText
-            ShakeBugService.appbarTitleColor =
+            Companion.appbarTitleText = appbarTitleText
+            Companion.appbarTitleColor =
                 if (isValidColorHex(appbarTitleColor)) appbarTitleColor else APP_BAR_TITLE_COLOR
-            ShakeBugService.ticketTypeLabelText = ticketTypeLabelText
-            ShakeBugService.descriptionLabelText = descriptionLabelText
-            ShakeBugService.descriptionHintText = descriptionHintText
-            ShakeBugService.descriptionMaxLength = descriptionMaxLength
-            ShakeBugService.buttonText = buttonText
-            ShakeBugService.buttonTextColor =
+            Companion.ticketTypeLabelText = ticketTypeLabelText
+            Companion.descriptionLabelText = descriptionLabelText
+            Companion.descriptionHintText = descriptionHintText
+            Companion.descriptionMaxLength = descriptionMaxLength
+            Companion.buttonText = buttonText
+            Companion.buttonTextColor =
                 if (isValidColorHex(buttonTextColor)) buttonTextColor else BUTTON_TEXT_COLOR
-            ShakeBugService.buttonBackgroundColor =
+            Companion.buttonBackgroundColor =
                 if (isValidColorHex(buttonBackgroundColor)) buttonBackgroundColor else BUTTON_BACKGROUND_COLOR
-            ShakeBugService.labelColor =
+            Companion.labelColor =
                 if (isValidColorHex(labelColor)) labelColor else LABEL_COLOR
-            ShakeBugService.hintColor =
+            Companion.hintColor =
                 if (isValidColorHex(hintColor)) hintColor else HINT_COLOR
-            ShakeBugService.inputTextColor =
+            Companion.inputTextColor =
                 if (isValidColorHex(inputTextColor)) inputTextColor else INPUT_TEXT_COLOR
-            ShakeBugService.raiseNewTicket = raiseNewTicket
-            ShakeBugService.extraPayload = extraPayload
+            Companion.raiseNewTicket = raiseNewTicket
+            Companion.extraPayload = extraPayload
             if (raiseNewTicket) {
                 AppsOnAirServices.raiseNewTicket(context)
             } else {

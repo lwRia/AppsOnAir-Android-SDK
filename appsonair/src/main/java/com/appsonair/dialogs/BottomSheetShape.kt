@@ -1,4 +1,4 @@
-package com.appsonair
+package com.appsonair.dialogs
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,9 @@ import android.widget.RadioGroup
 import android.widget.SeekBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.appsonair.ColorPickerAdapter.OnColorPickerClickListener
+import com.appsonair.R
+import com.appsonair.adapters.ColorPickerAdapter
+import com.appsonair.adapters.ColorPickerAdapter.OnColorPickerClickListener
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import ja.burhanrashid52.photoeditor.shape.ShapeType
 

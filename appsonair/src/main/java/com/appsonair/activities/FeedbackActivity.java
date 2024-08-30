@@ -1,4 +1,4 @@
-package com.appsonair;
+package com.appsonair.activities;
 
 import android.annotation.SuppressLint;
 import android.app.ActivityManager;
@@ -40,9 +40,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.appsonair.model.DeviceInfo;
-import com.appsonair.shakeBug.OnItemClickListener;
-import com.appsonair.shakeBug.ShakeBugAdapter;
+import com.appsonair.R;
+import com.appsonair.adapters.ShakeBugAdapter;
+import com.appsonair.interfaces.OnItemClickListener;
+import com.appsonair.models.DeviceInfo;
+import com.appsonair.services.ShakeBugService;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.skydoves.powerspinner.OnSpinnerItemSelectedListener;

@@ -1,4 +1,4 @@
-package com.appsonair.model;
+package com.appsonair.models;
 
 public class DeviceInfo {
     private final String deviceModel;

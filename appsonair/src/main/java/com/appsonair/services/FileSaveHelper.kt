@@ -1,4 +1,4 @@
-package com.appsonair
+package com.appsonair.services
 
 import android.annotation.SuppressLint
 import android.content.ContentResolver

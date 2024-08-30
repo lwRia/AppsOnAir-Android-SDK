@@ -1,4 +1,4 @@
-package com.appsonair;
+package com.appsonair.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.appsonair.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;

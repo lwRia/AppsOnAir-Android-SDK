@@ -1,4 +1,4 @@
-package com.appsonair
+package com.appsonair.dialogs
 
 import android.content.Context
 import android.graphics.Color
@@ -16,7 +16,9 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.appsonair.ColorPickerAdapter.OnColorPickerClickListener
+import com.appsonair.R
+import com.appsonair.adapters.ColorPickerAdapter
+import com.appsonair.adapters.ColorPickerAdapter.OnColorPickerClickListener
 
 class TextEditorDialog : DialogFragment() {
 

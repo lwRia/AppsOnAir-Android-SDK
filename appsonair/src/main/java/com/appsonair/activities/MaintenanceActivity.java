@@ -1,4 +1,4 @@
-package com.appsonair;
+package com.appsonair.activities;
 
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -10,6 +10,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.appsonair.R;
+import com.appsonair.services.DownloadImageTask;
 
 import org.json.JSONObject;
 
