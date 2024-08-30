@@ -35,6 +35,7 @@ class ShakeBugService {
         var hintColor: String = HINT_COLOR
         var inputTextColor: String = INPUT_TEXT_COLOR
         var raiseNewTicket: Boolean = false
+        var extraPayload: Map<String, String> = mapOf<String, String>().withDefault { "" }
 
         fun isValidColorHex(colorHex: String): Boolean {
             return try {
@@ -50,6 +51,7 @@ class ShakeBugService {
         fun shakeBug(
             context: Context,
             raiseNewTicket: Boolean = false,
+            extraPayload: Map<String, String> = mapOf<String, String>().withDefault { "" },
             pageBackgroundColor: String = PAGE_BACKGROUND_COLOR,
             appbarBackgroundColor: String = APP_BAR_BACKGROUND_COLOR,
             appbarTitleText: String = APP_BAR_TITLE_TEXT,
@@ -63,7 +65,7 @@ class ShakeBugService {
             buttonBackgroundColor: String = BUTTON_BACKGROUND_COLOR,
             labelColor: String = LABEL_COLOR,
             hintColor: String = HINT_COLOR,
-            inputTextColor: String = INPUT_TEXT_COLOR
+            inputTextColor: String = INPUT_TEXT_COLOR,
         ) {
             ShakeBugService.pageBackgroundColor =
                 if (isValidColorHex(pageBackgroundColor)) pageBackgroundColor else PAGE_BACKGROUND_COLOR
@@ -88,6 +90,7 @@ class ShakeBugService {
             ShakeBugService.inputTextColor =
                 if (isValidColorHex(inputTextColor)) inputTextColor else INPUT_TEXT_COLOR
             ShakeBugService.raiseNewTicket = raiseNewTicket
+            ShakeBugService.extraPayload = extraPayload
             if (raiseNewTicket) {
                 AppsOnAirServices.raiseNewTicket(context)
             } else {

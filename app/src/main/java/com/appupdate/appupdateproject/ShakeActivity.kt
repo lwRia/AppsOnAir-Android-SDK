@@ -51,7 +51,15 @@ class ShakeActivity : AppCompatActivity() {
         })
 
         findViewById<Button>(R.id.btn_create_ticket).setOnClickListener(View.OnClickListener {
-            ShakeBugService.shakeBug(this, raiseNewTicket = true)
+            ShakeBugService.shakeBug(
+                this,
+                raiseNewTicket = true,
+                extraPayload = mapOf(
+                    "title" to "Initial Demo",
+                    "city" to "Surat",
+                    "state" to "Gujarat"
+                )
+            )
         })
 
         val packageInfo = packageManager.getPackageInfo(packageName, 0)

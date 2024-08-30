@@ -81,6 +81,9 @@ public class FeedbackActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
+
+        ShakeBugService.Companion companion1 = ShakeBugService.Companion;
+        Log.d(TAG, "testInitialMap :::::::" + companion1.getExtraPayload());
         //init views
         LinearLayout linearLayout = findViewById(R.id.ll_main);
         LinearLayout llAppbar = findViewById(R.id.ll_appbar);
