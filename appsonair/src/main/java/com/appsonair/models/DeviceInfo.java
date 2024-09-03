@@ -85,7 +85,7 @@ public class DeviceInfo {
         return releaseVersionNumber;
     }
 
-    public String getBubdleIdentifier() {
+    public String getBundleIdentifier() {
         return bundleIdentifier;
     }
 

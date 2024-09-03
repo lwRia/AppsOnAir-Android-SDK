@@ -20,6 +20,7 @@ import android.view.WindowManager
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.appsonair.interfaces.UpdateCallBack
+import com.appsonair.services.AppsOnAirServices
 import com.appsonair.services.ShakeBugService
 import java.io.IOException
 import java.text.DecimalFormat

@@ -20,6 +20,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.storage.StorageManager;
 import android.provider.MediaStore;
+import android.text.InputFilter;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
@@ -132,6 +133,10 @@ public class FeedbackActivity extends AppCompatActivity {
         tvDescription.setText(companion.getDescriptionLabelText());
         tvDescription.setTextColor(parseColor(companion.getLabelColor()));
         etDescription.setTextColor(parseColor(companion.getInputTextColor()));
+        InputFilter[] filters = new InputFilter[1];
+        filters[0] = new InputFilter.LengthFilter(companion.getDescriptionMaxLength());
+        etDescription.setFilters(filters);
+
         tilDescription.setCounterMaxLength(companion.getDescriptionMaxLength());
         tilDescription.setCounterTextColor(parseColor(companion.getLabelColor()));
         tilDescription.setPlaceholderText(companion.getDescriptionHintText());
