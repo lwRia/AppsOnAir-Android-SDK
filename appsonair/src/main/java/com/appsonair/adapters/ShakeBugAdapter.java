@@ -34,10 +34,10 @@ public class ShakeBugAdapter extends RecyclerView.Adapter<ShakeBugAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ShakeBugAdapter.ViewHolder holder, int position) {
         Uri imagePath = imageList.get(position);
-        // holder.imgBug.setImageURI(imagePath);
         Glide.with(holder.itemView.getContext())
                 .load(imagePath)
                 .into(holder.imgBug);
+        holder.imgBug.setClipToOutline(true);
     }
 
     @Override
