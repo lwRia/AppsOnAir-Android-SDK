@@ -21,7 +21,7 @@
 
         <meta-data
             android:name="com.appsonair.icon"
-            android:resource="@drawable/maintenance_icon" />
+            android:resource="@mipmap/ic_launcher" />
         <meta-data
             android:name="com.appsonair.name"
             android:value="@string/app_name" />
